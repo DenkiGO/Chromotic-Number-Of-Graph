@@ -95,13 +95,14 @@ class Graph:
             factors = list(expr.args)
             split_factors = [factors[i:i + max_factors] for i in range(0, len(factors), max_factors)]
             subexpressions = [sp.Mul(*part) for part in split_factors]
+            print(len(subexpressions))
             return subexpressions
 
         incidence_matrix, node_index = self.incidence_matrix()
         dnf_expression = get_dnf(incidence_matrix, node_index)
 
         # Разбиваем выражение на подвыражения
-        subexpressions = split_expression(dnf_expression, max_factors=17)
+        subexpressions = split_expression(dnf_expression, max_factors=6)
 
         # Замеряем время выполнения
         start_time = time()
@@ -114,18 +115,25 @@ class Graph:
         for expanded in expanded_expressions:
             multiplied_result = sp.Mul(multiplied_result, expanded)  # Умножаем
 
-        print(len(str(multiplied_result).split(" + ")))
+        subexpressions = split_expression(multiplied_result, max_factors=6)
+
+        # Умножаем все раскрытые выражения
+        multiplied_result = sp.sympify(1)  # Начальное значение для умножения
+        for expanded in subexpressions:
+            multiplied_result = sp.Mul(multiplied_result, expanded)  # Умножаем
+
+        final_result = sp.expand(multiplied_result)
 
         # Время выполнения параллельного раскрытия
         print(f"Время выполнения параллельного раскрытия: {time() - start_time:.4f} секунд")
 
         all_nodes = set(str(i) for i in node_index.keys())
-        print(f"Исходное DNF выражение: {dnf_expression}")
-        start1 = time()
-        expanded_dnf = str(sp.expand(dnf_expression)).split(" + ")
-        end1 = time()
-        print(len(expanded_dnf))
-        print(f"Время последовательного раскрытия: {end1 - start1:.4f} секунд")
+        # print(f"Исходное DNF выражение: {dnf_expression}")
+        # start1 = time()
+        # expanded_dnf = str(sp.expand(dnf_expression)).split(" + ")
+        # print(f"Время последовательного раскрытия: {time() - start1:.4f} секунд")
+
+        expanded_dnf = str(final_result).split(" + ")
 
         sets = [{str(num) for num in re.findall(r'\d+', s)} for s in expanded_dnf]
         conj = [add_missing(i, all_nodes) for i in sets]
@@ -149,7 +157,7 @@ class Graph:
 
 if __name__ == "__main__":
     """ Метод МАГУ """
-    graph = Graph(10)
+    graph = Graph(12)
     chromatic_number = graph.method_MAGU()
     print(f"Хроматическое число графа: {chromatic_number}")
     graph.draw_graph()
