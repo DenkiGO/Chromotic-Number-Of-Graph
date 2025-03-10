@@ -82,21 +82,11 @@ class Graph:
 
         all_nodes = set(str(i) for i in node_index.keys())
 
-        # Функция для выполнения второго задания
-        def task2(dnf_expression):
-            global expandewew_dnf
-            print(dnf_expression)
-            start1 = time()
-            expandewew_dnf = str(sp.expand(dnf_expression)).split(" + ")
-            end1 = time()
-            print(f"Время - 2: {end1 - start1}")
-
-        # Создаем потоки
-        thread2 = threading.Thread(target=task2, args=(dnf_expression,))
-
-        thread2.start()
-
-        thread2.join()
+        print(dnf_expression)
+        start1 = time()
+        expandewew_dnf = str(sp.expand(dnf_expression)).split(" + ")
+        end1 = time()
+        print(f"Время - 2: {end1 - start1}")
 
         sets = [{str(num) for num in re.findall(r'\d+', s)} for s in expandewew_dnf]
         conj = [add_missing(i, all_nodes) for i in sets]
