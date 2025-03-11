@@ -157,7 +157,7 @@ class Graph:
 
 if __name__ == "__main__":
     """ Метод МАГУ """
-    graph = Graph(12)
+    graph = Graph(10)
     chromatic_number = graph.method_MAGU()
     print(f"Хроматическое число графа: {chromatic_number}")
     graph.draw_graph()
