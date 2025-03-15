@@ -12,6 +12,21 @@ import itertools
 import re
 from time import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from multiprocessing import Pool
+
+
+# Функция для раскрытия одного выражения
+def expand_expression(expr):
+    expanded = sp.expand(expr)
+    return expanded
+
+
+# Основная функция для параллельного раскрытия
+def parallel_expand(expressions):
+    with Pool() as pool:
+        results = pool.map(expand_expression, expressions)
+    return results
+
 
 class Graph:
     def __init__(self, nodes):
@@ -62,7 +77,9 @@ class Graph:
 
         return matrix, {node: i for i, node in enumerate(nodes_list)}
 
-    def optimized_method_MAGU(self):
+    def method_MAGU(self):
+        """Метод Магу-Вейсмана для раскраски графа"""
+
         def get_dnf(incidence_matrix, node_index):
             dnf_terms = []
             for edge_idx in range(incidence_matrix.shape[1]):
@@ -70,57 +87,84 @@ class Graph:
                 dnf_terms.append(f'({" + ".join(["x" + str(n) for n in nodes])})')
             return " * ".join(dnf_terms)
 
-        def expand_dnf_parallel(dnf_expression, max_workers=None):
-            with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                future = executor.submit(sp.expand, dnf_expression)
-                expanded_dnf = str(future.result()).split(" + ")
-            return expanded_dnf
+        def add_missing(conjunction, all_nodes):
+            missing_nodes = all_nodes - conjunction
+            return missing_nodes
 
-        def process_conjunctions(sets, all_nodes):
-            def add_missing(conjunction, all_nodes):
-                return all_nodes - conjunction
+        def split_expression(expr, max_factors=15):
+            if isinstance(expr, str):
+                expr = sp.sympify(expr)
+            if not isinstance(expr, sp.Mul):
+                return [expr]
+            factors = list(expr.args)
+            split_factors = [factors[i:i + max_factors] for i in range(0, len(factors), max_factors)]
+            subexpressions = [sp.Mul(*part) for part in split_factors]
+            print(len(subexpressions))
+            return subexpressions
 
-            conj = [add_missing(set(re.findall(r'\d+', s)), all_nodes) for s in sets]
-            return sorted(conj, key=len, reverse=True)
-
-        def color_graph(sort1, sys_colors):
-            num_colors = 0
-            color_num1 = {}
-            all_nodes = {str(i) for i in range(1, len(sys_colors) + 1)}
-
-            while sort1:
-                all_nodes_in_conjunction = sort1[0]
-                num_colors += 1
-
-                for i in all_nodes_in_conjunction:
-                    color_num1[i] = sys_colors[num_colors - 1]
-
-                filtered_data = [s - all_nodes_in_conjunction for s in sort1 if s - all_nodes_in_conjunction]
-                sort1 = sorted(filtered_data, key=len, reverse=True)
-
-            return color_num1, num_colors
-
-        # Получаем матрицу инцидентности
         incidence_matrix, node_index = self.incidence_matrix()
-
-        # Получаем ДНФ выражение
         dnf_expression = get_dnf(incidence_matrix, node_index)
 
-        # Параллельное расширение ДНФ
-        start1 = time()
-        expanded_dnf = expand_dnf_parallel(dnf_expression)
-        end1 = time()
-        print(f"Время расширения ДНФ: {end1 - start1}")
+        # Разбиваем выражение на подвыражения
+        subexpressions = split_expression(dnf_expression, max_factors=6)
 
-        # Обработка конъюнкций
-        all_nodes = {str(num) for num in node_index.keys()}
-        sort1 = process_conjunctions(expanded_dnf, all_nodes)
+        # Замеряем время выполнения
+        start_time = time()
 
-        # Раскраска графа
-        color_num1, num_colors = color_graph(sort1, self.sys_colors)
+        # Раскрываем выражения параллельно
+        expanded_expressions = parallel_expand(subexpressions)
 
-        # Применение цветов
-        self.list_colors = [color_num1.get(str(i), self.sys_colors[0]) for i in range(1, self.nodes + 1)]
+        # Умножаем все раскрытые выражения
+        multiplied_result = sp.sympify(1)  # Начальное значение для умножения
+        for expanded in expanded_expressions:
+            multiplied_result = sp.Mul(multiplied_result, expanded)  # Умножаем
+
+        subexpressions = split_expression(multiplied_result, max_factors=2)
+
+        # Умножаем все раскрытые выражения
+        multiplied_result = sp.sympify(1)  # Начальное значение для умножения
+        for expanded in subexpressions:
+            multiplied_result = sp.Mul(multiplied_result, expanded)  # Умножаем
+
+        final_result = sp.expand(multiplied_result)
+
+        # Время выполнения параллельного раскрытия
+        print(f"Время выполнения параллельного раскрытия: {time() - start_time:.4f} секунд")
+
+        all_nodes = set(str(i) for i in node_index.keys())
+
+        expanded_dnf = str(final_result).split(" + ")
+
+        sets = [{str(num) for num in re.findall(r'\d+', s)} for s in expanded_dnf]
+        conj = [add_missing(i, all_nodes) for i in sets]
+        # Преобразуем каждое множество в conj в frozenset (или tuple)
+        hashable_conj = [frozenset(s) for s in conj]
+        unique_conj = list(dict.fromkeys(hashable_conj))
+
+        unique_conj = [set(s) for s in unique_conj]
+        sort1 = sorted(unique_conj, key=len, reverse=True)
+
+        # Стартуем с хроматического числа
+        num_colors = 0
+        color_num1 = {}
+        while sort1:
+            all_nodes_in_conjunction = sort1[0]
+            num_colors += 1
+            for i in all_nodes_in_conjunction:
+                color_num1[i] = self.sys_colors[num_colors % len(self.sys_colors)]
+            filtered_data = [s - all_nodes_in_conjunction for s in sort1 if s - all_nodes_in_conjunction]
+            sort1 = sorted(filtered_data, key=len, reverse=True)
+
+        self.list_colors = [color_num1.get(str(i), "#FFFFFF") for i in range(1, self.nodes + 1)]
+
+        with open('test_all_method.txt', 'a') as file:
+            dict_parallel = {}
+            dict_parallel["method"] = "parallel"
+            dict_parallel["time"] = f"{time() - start_time}"
+            dict_parallel["num_nodes"] = f"{self.nodes}"
+            dict_parallel["result"] = f"{num_colors}"
+
+            file.write(str(dict_parallel) + '\n')
 
         return num_colors
 
@@ -228,6 +272,17 @@ class Graph:
         # Хроматическое число = количество уникальных цветов в лучшей раскраске
         chromatic_number = len(set(best_individual))
         return chromatic_number
+
+
+with open('paralell_and_usual.txt', 'a') as file:
+    dict_parallel = {}
+    dict_parallel["method"] = "parallel"
+    dict_parallel["time"] = f"{time() - start_time}"
+    dict_parallel["num_nodes"] = ""
+    dict_parallel["result"] = ""
+
+    file.write(str(dict_parallel)+'\n')
+
 
 
 """ Метод МАГУ """
