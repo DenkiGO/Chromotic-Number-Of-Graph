@@ -218,21 +218,22 @@ class Graph:
         return chromatic_number
 
 
-""" Метод МАГУ """
-graph = Graph(10)
-chromatic_number = graph.method_MAGU()
-print(f"Хроматическое число графа: {chromatic_number}")
-graph.draw_graph()
+if __name__ == '__main__':
+    """ Метод МАГУ """
+    graph = Graph(10)
+    chromatic_number = graph.method_MAGU()
+    print(f"Хроматическое число графа: {chromatic_number}")
+    graph.draw_graph()
 
-""" Жадный алгоритм """
-g = Graph(20)
-print("Приближенное хроматическое число:", g.greedy_coloring())
-g.draw_graph()
+    """ Жадный алгоритм """
+    g = Graph(20)
+    print("Приближенное хроматическое число:", g.greedy_coloring())
+    g.draw_graph()
 
-""" Генетический алгоритм """
-g = Graph(20)
-print("Приближенное хроматическое число (генетический алгоритм):", g.genetic_algorithm_coloring())
-g.draw_graph()
+    """ Генетический алгоритм """
+    g = Graph(20)
+    print("Приближенное хроматическое число (генетический алгоритм):", g.genetic_algorithm_coloring())
+    g.draw_graph()
 
 
 # all_graph = Graph.generate_graph_set(5, 11)
