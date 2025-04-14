@@ -32,4 +32,9 @@ plt.xlabel('Метод')
 plt.ylabel('Средний результат (result)')
 plt.title('Сравнение средних результатов по методам')
 plt.grid(True, axis='y')  # Сетка только по оси Y
+
+# Добавляем подпись с средними значениями
+subtitle = ", ".join([f"{method}: {avg_results[method]:.2f}" for method in methods])
+plt.figtext(0.5, 0.01, f"Средние значения: {subtitle}", ha="center", fontsize=10, bbox={"facecolor":"orange", "alpha":0.5, "pad":5})
+
 plt.show()

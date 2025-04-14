@@ -154,7 +154,7 @@ class Graph:
 
         # Время выполнения параллельного раскрытия
         res_time = f"{time() - start_time:.4f}"
-        print(f"Время выполнения параллельного раскрытия: {res_time} секунд")
+        # print(f"Время выполнения параллельного раскрытия: {res_time} секунд")
 
         all_nodes = set(str(i) for i in node_index.keys())
         # print(f"Исходное DNF выражение: {dnf_expression}")
@@ -166,12 +166,17 @@ class Graph:
 
         sets = [{str(num) for num in re.findall(r'\d+', s)} for s in expanded_dnf]
         conj = [add_missing(i, all_nodes) for i in sets]
+
+        # print(1, len(conj))
+        #
         # Преобразуем каждое множество в conj в frozenset (или tuple)
         hashable_conj = [frozenset(s) for s in conj]
         unique_conj = list(dict.fromkeys(hashable_conj))
 
         unique_conj = [set(s) for s in unique_conj]
-        sort1 = sorted(unique_conj, key=len, reverse=True)
+        my_list = sorted(unique_conj, key=len, reverse=True)
+
+        sort1 = [item for item in my_list if item != set()]
 
         # Стартуем с хроматического числа
         num_colors = 0
@@ -928,40 +933,38 @@ class Graph:
 
 
 if __name__ == '__main__':
-    """ Метод МАГУ """
-    # g = Graph(30)
+    # """ Метод МАГУ """
+    # g = Graph(12, 17)
     # chromatic_number = g.method_MAGU()
-    # print(f"Хроматическое число графа: {chromatic_number}")
-    # g.draw_graph()
-
-    """ Жадный алгоритм """
-    # g = Graph(20)
-    # print("Приближенное хроматическое число:", g.greedy_coloring())
-    # g.draw_graph()
+    # print(f"Хроматическое число МАГУ графа: {chromatic_number}")
+    # print(f"Исправленный МАГУ графа: {chromatic_number-1}")
+    # # g.draw_graph()
+    #
+    # """ Жадный алгоритм """
+    # # g = Graph(20)
+    # print("Приближенное хроматическое число:", g.greedy_coloring()+1)
+    # # g.draw_graph()
 
     # """ Генетический алгоритм """
     # # g = Graph(20)
     # print("Приближенное хроматическое число (генетический алгоритм):", g.genetic_algorithm_coloring())
     # g.draw_graph()
 
-    """ Генетический алгоритм v. 2"""
-    # g = Graph(20)
+    # """ Генетический алгоритм v. 2"""
+    # # g = Graph(20)
     # print("Приближенное хроматическое число (генетический алгоритм v. 2):", g.genetic_coloring())
-    # g.draw_graph()
-
-    """ Генетический алгоритм v. 3"""
-    # g = Graph(20)
+    # # g.draw_graph()
+    #
+    # """ Генетический алгоритм v. 3"""
+    # # g = Graph(20)
     # print("Приближенное хроматическое число (генетический алгоритм v. 3):", g.improved_genetic_coloring())
-    # g.draw_graph()
+    # # g.draw_graph()
 
-    for i in range(23, 29):
-        for j in range(10):
-            g = Graph(12, i)
-            g.greedy_coloring()
-            g.genetic_coloring()
-            g.improved_genetic_coloring()
-            g.method_MAGU()
-
+    for i in range(100):
+        g = Graph(100)
+        g.greedy_coloring()
+        g.genetic_coloring()
+        # g.improved_genetic_coloring()
         print(i)
 
 
