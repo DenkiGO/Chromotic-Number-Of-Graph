@@ -1,0 +1,3 @@
+{'method': 'genetic', 'time': '0.0040', 'nodes': 20, 'edges': 76, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.3340', 'nodes': 20, 'edges': 76, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'genetic', 'time': '0.0070', 'nodes': 20, 'edges': 84, 'result': 6}

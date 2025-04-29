@@ -214,6 +214,10 @@ class Graph:
 
         sort1 = [item for item in my_list1 if item != set()]
 
+        # Время выполнения параллельного раскрытия
+        res_time_1 = f"{time() - start_time:.4f}"
+        print(f"Время выполнения параллельного раскрытия 2: {res_time_1} секунд")
+
         dict_1 = {}
 
         for node in self.graph.nodes:
@@ -238,29 +242,33 @@ class Graph:
 
         sum_color = res[1]
 
-        # Стартуем с хроматического числа
-        num_colors = 0
-        color_num1 = {}
-        while sort1:
-            all_nodes_in_conjunction = sort1[0]
-            num_colors += 1
-            for i in all_nodes_in_conjunction:
-                color_num1[i] = self.sys_colors[num_colors % len(self.sys_colors)]
-            filtered_data = [s - all_nodes_in_conjunction for s in sort1 if s - all_nodes_in_conjunction]
-            sort1 = sorted(filtered_data, key=len, reverse=True)
+        # # Стартуем с хроматического числа
+        # num_colors = 0
+        # color_num1 = {}
+        # while sort1:
+        #     all_nodes_in_conjunction = sort1[0]
+        #     num_colors += 1
+        #     for i in all_nodes_in_conjunction:
+        #         color_num1[i] = self.sys_colors[num_colors % len(self.sys_colors)]
+        #     filtered_data = [s - all_nodes_in_conjunction for s in sort1 if s - all_nodes_in_conjunction]
+        #     sort1 = sorted(filtered_data, key=len, reverse=True)
+        #
+        # self.list_colors = [color_num1.get(str(i), "#FFFFFF") for i in range(1, self.nodes + 1)]
 
-        self.list_colors = [color_num1.get(str(i), "#FFFFFF") for i in range(1, self.nodes + 1)]
+        # Время выполнения параллельного раскрытия
+        res_time_2 = f"{time() - start_time:.4f}"
+        print(f"Время выполнения параллельного раскрытия 3: {res_time_2} секунд")
 
         with open('test_all_methods.txt', 'a') as file:
             dict_usual = {}
             dict_usual["method"] = "MAGU"
-            dict_usual["time"] = res_time
+            dict_usual["time"] = res_time_2
             dict_usual["nodes"] = self.nodes
             dict_usual["edges"] = self.edge_count
             dict_usual["result"] = sum_color
             file.write(str(dict_usual) + "\n")
 
-        return num_colors
+        return sum_color
 
 
     def greedy_coloring(self):
@@ -381,22 +389,22 @@ class Graph:
         chromatic_number = len(set(best_individual))
         return chromatic_number
 
-    def genetic_coloring(self, population_size=50, generations=100, mutation_rate=0.1, elite_size=5):
+    def genetic_coloring(self, population_size=5, generations=5, mutation_rate=0.1, elite_size=5):
         """
         Генетический алгоритм для нахождения хроматического числа графа.
         """
-        # print("\n=== НАЧАЛО ГЕНЕТИЧЕСКОГО АЛГОРИТМА ===")
-        # print(f"Параметры алгоритма:")
-        # print(f"- Размер популяции: {population_size}")
-        # print(f"- Количество поколений: {generations}")
-        # print(f"- Вероятность мутации: {mutation_rate}")
-        # print(f"- Размер элиты: {elite_size}")
+        print("\n=== НАЧАЛО ГЕНЕТИЧЕСКОГО АЛГОРИТМА ===")
+        print(f"Параметры алгоритма:")
+        print(f"- Размер популяции: {population_size}")
+        print(f"- Количество поколений: {generations}")
+        print(f"- Вероятность мутации: {mutation_rate}")
+        print(f"- Размер элиты: {elite_size}")
 
         start_time = time()
-        # print("\n1. Подготовка данных:")
+        print("\n1. Подготовка данных:")
         adjacency_list = {node: list(self.graph.neighbors(node)) for node in self.graph.nodes}
-        # print(f"- Создан список смежности для {len(adjacency_list)} вершин")
-        # print(adjacency_list)
+        print(f"- Создан список смежности для {len(adjacency_list)} вершин")
+        print(adjacency_list)
 
         def create_individual(max_colors):
             coloring = {}
@@ -405,8 +413,7 @@ class Graph:
                 available_colors = [c for c in range(max_colors) if c not in neighbor_colors]
                 if available_colors:
                     coloring[node] = random.choice(available_colors)
-                else:
-                    coloring[node] = random.randrange(max_colors)
+                else:                    coloring[node] = random.randrange(max_colors)
             return coloring
 
         def fitness(coloring):
@@ -442,27 +449,27 @@ class Graph:
                         mutated[node] = random.randrange(max_colors)
             return mutated
 
-        # print("\n2. Инициализация начальных параметров:")
+        print("\n2. Инициализация начальных параметров:")
         initial_colors = len(self.graph.nodes)
         current_best_colors = initial_colors
-        # print(f"- Начальное предположение о хроматическом числе: {initial_colors} цветов")
+        print(f"- Начальное предположение о хроматическом числе: {initial_colors} цветов")
 
         population = [create_individual(initial_colors) for _ in range(population_size)]
-        # print(f"- Начальная популяция из {population_size} особей:")
-        # for i in population:
-        #     print(i)
+        print(f"- Начальная популяция из {population_size} особей:")
+        for i in population:
+            print(i)
 
-        # print("\n3. Начало эволюционного процесса:")
+        print("\n3. Начало эволюционного процесса:")
         for generation in range(generations):
-            # print(f"\n=== ПОКОЛЕНИЕ {generation + 1}/{generations} ===")
-            # print("1. Оценка пригодности популяции:")
+            print(f"\n=== ПОКОЛЕНИЕ {generation + 1}/{generations} ===")
+            print("1. Оценка пригодности популяции:")
 
             # Оценка пригодности всех особей
             fitness_scores = []
             for idx, individual in enumerate(population):
                 conflicts, colors_used = fitness(individual)
                 fitness_scores.append((individual, (conflicts, colors_used)))
-                # print(f"  Особа #{idx + 1}: конфликты={-conflicts}, цветов={colors_used}")
+                print(f"  Особа #{idx + 1}: конфликты={-conflicts}, цветов={colors_used}, {individual}")
 
             # Сортировка по пригодности
             fitness_scores.sort(key=lambda x: (x[1][0], -x[1][1]), reverse=True)
@@ -472,15 +479,15 @@ class Graph:
             best_coloring, (best_conflicts, best_colors_used) = top_3[0]
             avg_conflicts = sum(score[1][0] for score in fitness_scores) / len(fitness_scores)
 
-            # print("\n2. Анализ поколения:")
-            # print(f"- ЛУЧШАЯ ОСОБЬ: конфликты={-best_conflicts}, цветов={best_colors_used}")
-            # print(f"- Топ-3 особи:")
-            # for i, (ind, (conf, colors)) in enumerate(top_3):
-            #     print(f"  {i + 1}. Конфликты={-conf}, Цветов={colors}")
-            #
-            # print(f"- Среднее количество конфликтов в популяции: {-avg_conflicts:.2f}")
-            # print(
-            #     f"- Диапазон цветов в популяции: {min(f[1][1] for f in fitness_scores)}-{max(f[1][1] for f in fitness_scores)}")
+            print("\n2. Анализ поколения:")
+            print(f"- ЛУЧШАЯ ОСОБЬ: конфликты={-best_conflicts}, цветов={best_colors_used}")
+            print(f"- Топ-3 особи:")
+            for i, (ind, (conf, colors)) in enumerate(top_3):
+                print(f"  {i + 1}. Конфликты={-conf}, Цветов={colors}")
+
+            print(f"- Среднее количество конфликтов в популяции: {-avg_conflicts:.2f}")
+            print(
+                f"- Диапазон цветов в популяции: {min(f[1][1] for f in fitness_scores)}-{max(f[1][1] for f in fitness_scores)}")
 
             # Проверка на допустимую раскраску
             if best_conflicts == 0:
@@ -489,34 +496,34 @@ class Graph:
 
                 if num_colors < current_best_colors:
                     current_best_colors = num_colors
-                    # print("\n3. НАЙДЕНО УЛУЧШЕНИЕ:")
-                    # print(f"! ДОПУСТИМАЯ РАСКРАСКА С {num_colors} ЦВЕТАМИ !")
-                    # print(f"Цвета в раскраске: {sorted(unique_colors)}")
+                    print("\n3. НАЙДЕНО УЛУЧШЕНИЕ:")
+                    print(f"! ДОПУСТИМАЯ РАСКРАСКА С {num_colors} ЦВЕТАМИ !")
+                    print(f"Цвета в раскраске: {sorted(unique_colors)}")
 
                     # Анализ распределения цветов
                     color_dist = {}
                     for color in best_coloring.values():
                         color_dist[color] = color_dist.get(color, 0) + 1
-                    # print("Распределение цветов:")
-                    # for color, count in sorted(color_dist.items()):
-                    #     print(f"  Цвет {color}: {count} вершин ({count / self.nodes:.1%})")
+                    print("Распределение цветов:")
+                    for color, count in sorted(color_dist.items()):
+                        print(f"  Цвет {color}: {count} вершин ({count / self.nodes:.1%})")
 
                     if num_colors > 1:
-                        # print(f"\n4. УМЕНЬШЕНИЕ ЦВЕТОВ:")
+                        print(f"\n4. УМЕНЬШЕНИЕ ЦВЕТОВ:")
                         new_max_colors = num_colors - 1
-                        # print(f"Пробуем уменьшить количество цветов до {new_max_colors}")
-                        # print("Создаем новую популяцию...")
+                        print(f"Пробуем уменьшить количество цветов до {new_max_colors}")
+                        print("Создаем новую популяцию...")
                         population = [create_individual(new_max_colors) for _ in range(population_size)]
                         continue
 
             # Формирование нового поколения
-            # print("\n5. СОЗДАНИЕ НОВОГО ПОКОЛЕНИЯ:")
+            print("\n5. СОЗДАНИЕ НОВОГО ПОКОЛЕНИЯ:")
             next_generation = [coloring for coloring, _ in fitness_scores[:elite_size]]
-            # print(f"- Элитные особи (сохранено {elite_size} лучших):")
-            # for i, (ind, (conf, colors)) in enumerate(fitness_scores[:elite_size]):
-            #     print(f"  #{i + 1}: конфликты={-conf}, цветов={colors}")
+            print(f"- Элитные особи (сохранено {elite_size} лучших):")
+            for i, (ind, (conf, colors)) in enumerate(fitness_scores[:elite_size]):
+                print(f"  #{i + 1}: конфликты={-conf}, цветов={colors}")
 
-            # print("\n6. ПРОЦЕСС РАЗМНОЖЕНИЯ:")
+            print("\n6. ПРОЦЕСС РАЗМНОЖЕНИЯ:")
             children_count = 0
             while len(next_generation) < population_size:
                 children_count += 1
@@ -531,26 +538,26 @@ class Graph:
                 parent2_conf = -max(tournament2, key=lambda x: x[1][0])[1][0]
                 parent2_colors = max(tournament2, key=lambda x: x[1][0])[1][1]
 
-                # print(f"\n  Потомок #{children_count}:")
-                # print(f"  Родитель 1: конфликты={parent1_conf}, цветов={parent1_colors}, {tournament1[1][0]}")
-                # print(f"  Родитель 2: конфликты={parent2_conf}, цветов={parent2_colors}, {tournament2[1][0]}")
+                print(f"\n  Потомок #{children_count}:")
+                print(f"  Родитель 1: конфликты={parent1_conf}, цветов={parent1_colors}, {tournament1[1][0]}")
+                print(f"  Родитель 2: конфликты={parent2_conf}, цветов={parent2_colors}, {tournament2[1][0]}")
 
                 # Кроссовер
                 child = crossover(parent1, parent2)
                 child_conf, child_colors = fitness(child)
-                # print(f"  После кроссовера: конфликты={-child_conf}, цветов={child_colors}, {child}")
+                print(f"  После кроссовера: конфликты={-child_conf}, цветов={child_colors}, {child}")
 
                 # Мутация
                 child = mutate(child, current_best_colors)
                 child_conf, child_colors = fitness(child)
-                # print(f"  После мутации: конфликты={-child_conf}, цветов={child_colors}, {child}")
+                print(f"  После мутации: конфликты={-child_conf}, цветов={child_colors}, {child}")
 
                 next_generation.append(child)
 
             population = next_generation
             # print(f"\nИтоговый размер нового поколения: {len(population)} особей")
 
-        # print("\n4. Завершение алгоритма:")
+        print("\n4. Завершение алгоритма:")
         best_coloring = max(population, key=lambda x: fitness(x)[0])
         unique_colors = set(best_coloring.values())
         num_colors = len(unique_colors)
@@ -559,8 +566,8 @@ class Graph:
         self.list_colors = [color_map[best_coloring[node]] for node in range(1, self.nodes + 1)]
 
         res_time = f"{time() - start_time:.4f}"
-        # print(f"- Наилучшая раскраска использует {num_colors} цветов")
-        # print(f"- Время выполнения: {res_time} секунд")
+        print(f"- Наилучшая раскраска использует {num_colors} цветов")
+        print(f"- Время выполнения: {res_time} секунд")
 
         with open('test_all_methods.txt', 'a') as file:
             dict_usual = {
@@ -572,7 +579,7 @@ class Graph:
             }
             file.write(str(dict_usual) + "\n")
 
-        # print("=== ГЕНЕТИЧЕСКИЙ АЛГОРИТМ ЗАВЕРШЕН ===\n")
+        print("=== ГЕНЕТИЧЕСКИЙ АЛГОРИТМ ЗАВЕРШЕН ===\n")
         return num_colors
 
     def improved_genetic_coloring(self, population_size=50, generations=100, initial_mutation_rate=0.2, elite_size=5,
@@ -643,8 +650,8 @@ class Graph:
         else:
             current_best_colors = self.greedy_coloring()  # Начинаем с чуть большего значения
 
-        print(f"Начальная оценка хроматического числа: {initial_colors} (клика: {clique_size}, макс. степень: {max_degree})")
-        print()
+        # print(f"Начальная оценка хроматического числа: {initial_colors} (клика: {clique_size}, макс. степень: {max_degree})")
+        # print()
 
         # Функция для создания начальной популяции с учетом жадной стратегии
         def create_initial_population(pop_size, max_colors):
@@ -1059,25 +1066,25 @@ if __name__ == '__main__':
     # print("Приближенное хроматическое число (генетический алгоритм):", g.genetic_algorithm_coloring())
     # g.draw_graph()
 
-    # """ Генетический алгоритм v. 2"""
-    # g = Graph(20)
-    # print("Приближенное хроматическое число (генетический алгоритм v. 2):", g.genetic_coloring())
-    # g.draw_graph()
+    """ Генетический алгоритм v. 2"""
+    g = Graph(6, 7)
+    print("Приближенное хроматическое число (генетический алгоритм v. 2):", g.genetic_coloring())
+    g.draw_graph()
 
     # """ Генетический алгоритм v. 3"""
     # g = Graph(20)
     # print("Приближенное хроматическое число (генетический алгоритм v. 3):", g.improved_genetic_coloring())
     # g.draw_graph()
 
-    for j in range(17, 21):
-        for i in range(10):
-            g = Graph(12, j)
-            g.method_MAGU()
-            g.greedy_coloring()
-            g.genetic_coloring()
-            g.improved_genetic_coloring()
-            g.improved_genetic_coloring(flag=False)
-            print(i)
+    # for j in range(20, 25):
+    #     for i in range(10):
+    #         g = Graph(9, j)
+    #         g.method_MAGU()
+    #         g.greedy_coloring()
+    #         g.genetic_coloring()
+    #         g.improved_genetic_coloring()
+    #         g.improved_genetic_coloring(flag=False)
+    #         print(i)
 
     # for i in range(100):
     #     g = Graph(55)

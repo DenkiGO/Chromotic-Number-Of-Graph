@@ -1,0 +1,385 @@
+{'method': 'MAGU', 'time': '212.1701', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'MAGU', 'time': '83.2710', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'genetic', 'time': '0.0872', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1141', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1150', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '545.6915', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0043', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0947', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1243', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1200', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '390.8595', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0031', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0919', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1217', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1220', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '64.4299', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'genetic', 'time': '0.0869', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1164', 'nodes': 9, 'edges': 20, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1152', 'nodes': 9, 'edges': 20, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '426.5148', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'greedy', 'time': '0.0027', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'genetic', 'time': '0.0896', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1185', 'nodes': 9, 'edges': 20, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1217', 'nodes': 9, 'edges': 20, 'result': 3, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '2910.2135', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'greedy', 'time': '0.0061', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'genetic', 'time': '0.0965', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1278', 'nodes': 9, 'edges': 20, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1224', 'nodes': 9, 'edges': 20, 'result': 3, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '53.2863', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0915', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1206', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1142', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '421.3822', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0044', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0914', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1221', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1212', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '1256.8915', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0057', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0932', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1268', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1228', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '357.1031', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0040', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0904', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1226', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1198', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '86.7614', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0889', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1504', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1499', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '38.0240', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0880', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1174', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1161', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '94.8558', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0860', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1169', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1165', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '115.9845', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0898', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1187', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1180', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '272.2911', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0900', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1233', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1190', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '98.8168', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0872', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1191', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1154', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '91.8519', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0863', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1170', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1142', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '49.0098', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0881', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1172', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1170', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '50.2990', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0880', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1163', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1174', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '41.0298', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'genetic', 'time': '0.0891', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1185', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1166', 'nodes': 9, 'edges': 21, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '42.7875', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'genetic', 'time': '0.0902', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1191', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1159', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '36.0148', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'genetic', 'time': '0.0912', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1190', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1166', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '37.4235', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0893', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1164', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1181', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '100.0618', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0890', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1196', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1206', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '27.1321', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0902', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1187', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1176', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '39.0870', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0924', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1532', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1542', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '38.6752', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0902', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1206', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1178', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '41.7102', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'genetic', 'time': '0.0892', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1192', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1192', 'nodes': 9, 'edges': 22, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '36.1512', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0911', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1184', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1180', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '38.2197', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'genetic', 'time': '0.0921', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1181', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 22, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1163', 'nodes': 9, 'edges': 22, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '26.2206', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'genetic', 'time': '0.0885', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1223', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1187', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '38.5677', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'genetic', 'time': '0.0911', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1193', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1194', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '23.7030', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'genetic', 'time': '0.0904', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1222', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1185', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '35.2565', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'genetic', 'time': '0.0884', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1194', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1194', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '33.2209', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'genetic', 'time': '0.0920', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1202', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1190', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '20.5355', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'genetic', 'time': '0.0913', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1200', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1206', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '23.1568', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'genetic', 'time': '0.0891', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1191', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1200', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '31.3599', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'genetic', 'time': '0.0897', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1222', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1188', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '27.6776', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'genetic', 'time': '0.0917', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1203', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1175', 'nodes': 9, 'edges': 23, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '41.3338', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'genetic', 'time': '0.0900', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1205', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1173', 'nodes': 9, 'edges': 23, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '30.2605', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'genetic', 'time': '0.0933', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1240', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1195', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '26.6565', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'genetic', 'time': '0.0926', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1216', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1203', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '26.0311', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'genetic', 'time': '0.0931', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1231', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1202', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '32.0233', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'genetic', 'time': '0.0905', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1236', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1192', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '31.6338', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'genetic', 'time': '0.0933', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1224', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1206', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '31.2148', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'genetic', 'time': '0.0924', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1215', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1180', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '26.1584', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'genetic', 'time': '0.0930', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1237', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1203', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '28.7756', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'genetic', 'time': '0.0912', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1201', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1201', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '30.7907', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'genetic', 'time': '0.0921', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1228', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1198', 'nodes': 9, 'edges': 24, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '26.8600', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'genetic', 'time': '0.0945', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1251', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 24, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1191', 'nodes': 9, 'edges': 24, 'result': 5, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '165.2904', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0020', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0914', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1163', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1144', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '112.9824', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'genetic', 'time': '0.0852', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1153', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1152', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '245.6638', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0020', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0909', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1250', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1179', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '191.0312', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0024', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0903', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1189', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1157', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '116.8081', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0870', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1150', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1130', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '81.2081', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0874', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1153', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1153', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '433.8140', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0045', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0930', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1235', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1209', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '108.1637', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0861', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1172', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1141', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '92.6846', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0861', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1165', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1134', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '91.3769', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'genetic', 'time': '0.0861', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1141', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 20, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1145', 'nodes': 9, 'edges': 20, 'result': 4, 'current_best_colors': 'False'}
+{'method': 'MAGU', 'time': '97.7124', 'nodes': 9, 'edges': 21, 'result': 3}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 3}
+{'method': 'genetic', 'time': '0.0862', 'nodes': 9, 'edges': 21, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1163', 'nodes': 9, 'edges': 21, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 9, 'edges': 21, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1161', 'nodes': 9, 'edges': 21, 'result': 3, 'current_best_colors': 'False'}
+{'method': 'improved_genetic', 'time': '0.2729', 'nodes': 20, 'edges': 65, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'genetic', 'time': '0.6752', 'nodes': 20, 'edges': 92, 'result': 6}
+{'method': 'genetic', 'time': '0.2930', 'nodes': 20, 'edges': 92, 'result': 5}
+{'method': 'genetic', 'time': '0.0154', 'nodes': 6, 'edges': 8, 'result': 2}
+{'method': 'genetic', 'time': '0.0122', 'nodes': 6, 'edges': 6, 'result': 2}
+{'method': 'genetic', 'time': '0.0011', 'nodes': 6, 'edges': 4, 'result': 2}
+{'method': 'genetic', 'time': '0.0051', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0032', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0021', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0051', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0010', 'nodes': 6, 'edges': 7, 'result': 1}
+{'method': 'genetic', 'time': '0.0042', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0020', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0010', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0041', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0040', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0032', 'nodes': 6, 'edges': 7, 'result': 2}
+{'method': 'genetic', 'time': '0.0039', 'nodes': 6, 'edges': 7, 'result': 2}
