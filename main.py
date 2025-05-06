@@ -356,7 +356,7 @@ class Graph:
             """
             population_size = len(new_population)
 
-            print("Кроссовер:")
+            # print("Кроссовер:")
 
             for i in range(population_size):
                 if random.random() < crossover_probability:
@@ -381,8 +381,8 @@ class Graph:
 
                     best_child = child1 if fitness_child1 > fitness_child2 else child2
                     best_fitness = max(fitness_child1, fitness_child2)
-                    print('---')
-                    print(f"особь №{i}. Родитель 1: {parent1} ({fitness_parent1}), Родитель 2: {parent2} | точка кроссовера: {crossover_point}\nРебенок 1: {child1} ({fitness_child1}), Ребенок 2: {child2} ({fitness_child2}) | Лучший: {best_child} ({max(fitness_child1, fitness_child2, fitness_parent1)})")
+                    # print('---')
+                    # print(f"особь №{i}. Родитель 1: {parent1} ({fitness_parent1}), Родитель 2: {parent2} | точка кроссовера: {crossover_point}\nРебенок 1: {child1} ({fitness_child1}), Ребенок 2: {child2} ({fitness_child2}) | Лучший: {best_child} ({max(fitness_child1, fitness_child2, fitness_parent1)})")
 
                     # Заменяем только если потомок лучше родителя
                     if best_fitness > fitness_parent1:
@@ -390,7 +390,7 @@ class Graph:
 
                     # Заменяем первого родителя (текущую особь) лучшим потомком
                     new_population[i] = best_child
-            print()
+            # print()
             return new_population
 
         def fitness(individual):
@@ -430,8 +430,8 @@ class Graph:
                     available_colors = [len(current_colors)]
                 color = random.choice(available_colors)
                 individual[idx] = color
-                print("---")
-                print(f"особь №{count_osob}. Мутация в вершине: {idx}. Новый цвет: {color}\n До {ind} | После {individual}")
+                # print("---")
+                # print(f"особь №{count_osob}. Мутация в вершине: {idx}. Новый цвет: {color}\n До {ind} | После {individual}")
 
             return individual
 
@@ -1268,7 +1268,7 @@ class Graph:
                 # Увеличиваем мутацию для выхода из локального оптимума
                 mutation_rate = min(0.8, mutation_rate * 1.5)
                 stagnation_counter = 0
-                print(f"Увеличена мутация до {mutation_rate:.2f} из-за стагнации")
+                # print(f"Увеличена мутация до {mutation_rate:.2f} из-за стагнации")
             else:
                 # Постепенно уменьшаем мутацию для лучшей сходимости
                 mutation_rate = max(0.05, mutation_rate * 0.95)
@@ -1287,15 +1287,15 @@ class Graph:
                 if improved_colors < num_colors:
                     best_coloring_candidate = improved_coloring
                     num_colors = improved_colors
-                    print(f"Лок. поиск: {improved_coloring}")
-                    print(f"Локальный поиск улучшил решение: {num_colors} цветов")
+                    # print(f"Лок. поиск: {improved_coloring}")
+                    # print(f"Локальный поиск улучшил решение: {num_colors} цветов")
 
                 if num_colors < best_chromatic_number:
                     best_chromatic_number = num_colors
                     best_coloring = best_coloring_candidate
-                    print(f"Допустимая раскраска: {best_coloring_candidate}")
-                    print(f"Поколение {generation}: Найдена допустимая раскраска с {num_colors} цветами")
-                    print()
+                    # print(f"Допустимая раскраска: {best_coloring_candidate}")
+                    # print(f"Поколение {generation}: Найдена допустимая раскраска с {num_colors} цветами")
+                    # print()
 
                     # Сохраняем раскраску в графе
                     color_map = {color: self.sys_colors[i % len(self.sys_colors)] for i, color in
@@ -1345,10 +1345,10 @@ class Graph:
 
             population = next_generation
 
-            # Отображаем прогресс
-            if generation % 10 == 0 or generation == generations - 1:
-                print(
-                    f"Поколение {generation}: Текущая цель = {current_best_colors}, Лучший результат = {best_chromatic_number}")
+            # # Отображаем прогресс
+            # if generation % 10 == 0 or generation == generations - 1:
+            #     print(
+            #         f"Поколение {generation}: Текущая цель = {current_best_colors}, Лучший результат = {best_chromatic_number}")
 
         # Если не нашли допустимую раскраску, используем лучшую найденную
         if best_coloring is None:
@@ -1362,8 +1362,8 @@ class Graph:
 
         # Выводим информацию о времени
         res_time = f"{time() - start_time:.4f}"
-        print(f"Улучшенный генетический алгоритм завершен за {res_time} секунд")
-        print(f"Найденное хроматическое число: {best_chromatic_number}")
+        # print(f"Улучшенный генетический алгоритм завершен за {res_time} секунд")
+        # print(f"Найденное хроматическое число: {best_chromatic_number}")
 
         if flag == True:
             with open('test_all_methods.txt', 'a') as file:
@@ -1428,8 +1428,7 @@ if __name__ == '__main__':
     #         print(i)
 
     for i in range(100):
-        g = Graph(9)
-        g.method_MAGU()
+        g = Graph(13)
         g.greedy_coloring()
         g.genetic_algorithm_coloring(coloring_method="greedy")
         # g.genetic_algorithm_coloring(coloring_method="independent_set")
@@ -1437,7 +1436,3 @@ if __name__ == '__main__':
         # g.genetic_algorithm_coloring(coloring_method="dsatur")
         g.improved_genetic_coloring()
         print(i)
-
-
-
-

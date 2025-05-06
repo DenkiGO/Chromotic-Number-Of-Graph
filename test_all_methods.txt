@@ -1,0 +1,313 @@
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 4}
+{'method': 'MAGU', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 5}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2101', 'nodes': 13, 'edges': 38, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2550', 'nodes': 13, 'edges': 38, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 40, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2230', 'nodes': 13, 'edges': 40, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2790', 'nodes': 13, 'edges': 40, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1951', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2031', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 32, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2140', 'nodes': 13, 'edges': 32, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2028', 'nodes': 13, 'edges': 32, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 24, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1671', 'nodes': 13, 'edges': 24, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1962', 'nodes': 13, 'edges': 24, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1909', 'nodes': 13, 'edges': 30, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1927', 'nodes': 13, 'edges': 30, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1880', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1988', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1960', 'nodes': 13, 'edges': 36, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2109', 'nodes': 13, 'edges': 36, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1724', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2249', 'nodes': 13, 'edges': 27, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 23, 'result': 3}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1900', 'nodes': 13, 'edges': 23, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.2499', 'nodes': 13, 'edges': 23, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 39, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2601', 'nodes': 13, 'edges': 39, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.3507', 'nodes': 13, 'edges': 39, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 23, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2000', 'nodes': 13, 'edges': 23, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2668', 'nodes': 13, 'edges': 23, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 39, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2638', 'nodes': 13, 'edges': 39, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2212', 'nodes': 13, 'edges': 39, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2020', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2823', 'nodes': 13, 'edges': 30, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2385', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2125', 'nodes': 13, 'edges': 29, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1963', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2229', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2671', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2091', 'nodes': 13, 'edges': 37, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1932', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.3267', 'nodes': 13, 'edges': 35, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 24, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2089', 'nodes': 13, 'edges': 24, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.2272', 'nodes': 13, 'edges': 24, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2265', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2710', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2534', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2246', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2392', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2787', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2411', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2885', 'nodes': 13, 'edges': 37, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1892', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1999', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1943', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2005', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1939', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2001', 'nodes': 13, 'edges': 35, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2031', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2068', 'nodes': 13, 'edges': 37, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1732', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1957', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0009', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1840', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.1959', 'nodes': 13, 'edges': 34, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1838', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2006', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2470', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2796', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2552', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2559', 'nodes': 13, 'edges': 37, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 38, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2893', 'nodes': 13, 'edges': 38, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.3035', 'nodes': 13, 'edges': 38, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2074', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2463', 'nodes': 13, 'edges': 35, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 39, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2622', 'nodes': 13, 'edges': 39, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2564', 'nodes': 13, 'edges': 39, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 26, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1951', 'nodes': 13, 'edges': 26, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2635', 'nodes': 13, 'edges': 26, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2238', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2058', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2364', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2235', 'nodes': 13, 'edges': 37, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1955', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2557', 'nodes': 13, 'edges': 35, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1810', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2009', 'nodes': 13, 'edges': 30, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 28, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1705', 'nodes': 13, 'edges': 28, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1874', 'nodes': 13, 'edges': 28, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2294', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2496', 'nodes': 13, 'edges': 36, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1990', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2798', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1924', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2100', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1822', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2051', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 3}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2065', 'nodes': 13, 'edges': 36, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.2615', 'nodes': 13, 'edges': 36, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2432', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.3538', 'nodes': 13, 'edges': 30, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 25, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2087', 'nodes': 13, 'edges': 25, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2270', 'nodes': 13, 'edges': 25, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 40, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2051', 'nodes': 13, 'edges': 40, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.3534', 'nodes': 13, 'edges': 40, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 26, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1848', 'nodes': 13, 'edges': 26, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2103', 'nodes': 13, 'edges': 26, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1747', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1929', 'nodes': 13, 'edges': 30, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2215', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2722', 'nodes': 13, 'edges': 29, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1718', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2076', 'nodes': 13, 'edges': 29, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2099', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2594', 'nodes': 13, 'edges': 35, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2332', 'nodes': 13, 'edges': 29, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.2374', 'nodes': 13, 'edges': 29, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1930', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2153', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 32, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2671', 'nodes': 13, 'edges': 32, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2597', 'nodes': 13, 'edges': 32, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2472', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2726', 'nodes': 13, 'edges': 30, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2146', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2866', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2610', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2659', 'nodes': 13, 'edges': 36, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2006', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2412', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2609', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2106', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1690', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1925', 'nodes': 13, 'edges': 29, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2477', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2308', 'nodes': 13, 'edges': 36, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1872', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2047', 'nodes': 13, 'edges': 35, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0010', 'nodes': 13, 'edges': 33, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1861', 'nodes': 13, 'edges': 33, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2474', 'nodes': 13, 'edges': 33, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1671', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1907', 'nodes': 13, 'edges': 27, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1745', 'nodes': 13, 'edges': 30, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2484', 'nodes': 13, 'edges': 30, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1861', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2014', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 40, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2121', 'nodes': 13, 'edges': 40, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2002', 'nodes': 13, 'edges': 40, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1935', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1993', 'nodes': 13, 'edges': 35, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1764', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1945', 'nodes': 13, 'edges': 29, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1863', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2051', 'nodes': 13, 'edges': 34, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 29, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1746', 'nodes': 13, 'edges': 29, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1908', 'nodes': 13, 'edges': 29, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 25, 'result': 3}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1571', 'nodes': 13, 'edges': 25, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1779', 'nodes': 13, 'edges': 25, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 22, 'result': 3}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1480', 'nodes': 13, 'edges': 22, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1765', 'nodes': 13, 'edges': 22, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 43, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2082', 'nodes': 13, 'edges': 43, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2141', 'nodes': 13, 'edges': 43, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1823', 'nodes': 13, 'edges': 34, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1992', 'nodes': 13, 'edges': 34, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1792', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2008', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 25, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1653', 'nodes': 13, 'edges': 25, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2316', 'nodes': 13, 'edges': 25, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1873', 'nodes': 13, 'edges': 34, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2036', 'nodes': 13, 'edges': 34, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1730', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1937', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1714', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1959', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 26, 'result': 3}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1641', 'nodes': 13, 'edges': 26, 'result': 3}
+{'method': 'improved_genetic', 'time': '0.1895', 'nodes': 13, 'edges': 26, 'result': 3, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1906', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2049', 'nodes': 13, 'edges': 36, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 28, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1708', 'nodes': 13, 'edges': 28, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1916', 'nodes': 13, 'edges': 28, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 32, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1799', 'nodes': 13, 'edges': 32, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1969', 'nodes': 13, 'edges': 32, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 36, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1882', 'nodes': 13, 'edges': 36, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1943', 'nodes': 13, 'edges': 36, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1886', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2149', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1949', 'nodes': 13, 'edges': 33, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2162', 'nodes': 13, 'edges': 33, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.2042', 'nodes': 13, 'edges': 31, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2157', 'nodes': 13, 'edges': 31, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1783', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2334', 'nodes': 13, 'edges': 27, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0001', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1923', 'nodes': 13, 'edges': 37, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2021', 'nodes': 13, 'edges': 37, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 31, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1778', 'nodes': 13, 'edges': 31, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2054', 'nodes': 13, 'edges': 31, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 26, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1569', 'nodes': 13, 'edges': 26, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1928', 'nodes': 13, 'edges': 26, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1926', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2080', 'nodes': 13, 'edges': 37, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1825', 'nodes': 13, 'edges': 35, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2029', 'nodes': 13, 'edges': 35, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1972', 'nodes': 13, 'edges': 37, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.2044', 'nodes': 13, 'edges': 37, 'result': 4, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1874', 'nodes': 13, 'edges': 35, 'result': 5}
+{'method': 'improved_genetic', 'time': '0.2092', 'nodes': 13, 'edges': 35, 'result': 5, 'current_best_colors': 'True'}
+{'method': 'greedy', 'time': '0.0000', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'genetic_algorithm_greedy', 'time': '0.1636', 'nodes': 13, 'edges': 27, 'result': 4}
+{'method': 'improved_genetic', 'time': '0.1897', 'nodes': 13, 'edges': 27, 'result': 4, 'current_best_colors': 'True'}
