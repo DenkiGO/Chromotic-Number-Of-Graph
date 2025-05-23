@@ -474,7 +474,7 @@ class Graph:
 
 if __name__ == '__main__':
     """ Генетический алгоритм """
-    g = Graph(6)
+    g = Graph(10)
     g.draw_graph()
 
     result = g.genetic_algorithm_coloring()
