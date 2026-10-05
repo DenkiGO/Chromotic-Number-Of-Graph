@@ -22,7 +22,7 @@ def parallel_expand(expressions):
 
 
 class Graph:
-    def __init__(self, nodes, edges=None):
+    def __init__(self, nodes, edges=None, edges_procent=0.6):
         """
         Создание простого графа.
         :param nodes: Количество вершин.
@@ -38,6 +38,7 @@ class Graph:
         self.sys_colors = ["#FF0000", "#00FFFF", "#FFFF00", "#0000FF", "#900020", "#808000", "#800080", "#008000"]
         self.graph = nx.Graph()
         self.graph.add_nodes_from(range(1, nodes + 1))
+        self.edges_procent = edges_procent
         self.generate_random_edges()
 
     def generate_random_edges(self):
@@ -47,7 +48,7 @@ class Graph:
             # Если количество рёбер не указано, генерируем рёбра случайно
             for i in range(1, self.nodes + 1):
                 for j in range(i + 1, self.nodes + 1):
-                    if random.random() > 0.6:
+                    if random.random() < self.edges_procent:
                         self.graph.add_edge(i, j)
                         self.edge_count += 1  # Увеличиваем счётчик при добавлении ребра
         else:
@@ -62,16 +63,17 @@ class Graph:
             selected_edges = random.sample(all_possible_edges, self.edges)
             self.graph.add_edges_from(selected_edges)
 
-    def draw_graph(self):
-        """Визуализация графа"""
+    def draw_graph(self, ax=None):
+        pos = nx.circular_layout(self.graph)
+        if ax is None:
+            ax = plt.gca()  # Используется стандартная ось, если ax не передан
         if len(self.list_colors) != 0:
-            pos = nx.circular_layout(self.graph)  # Или другой алгоритм/ручное задание координат
-            nx.draw(self.graph, pos, with_labels=True, node_color=self.list_colors, edge_color='gray',
-                    font_weight='bold')
-            plt.show()
+            nx.draw(self.graph, pos, ax=ax, with_labels=True,
+                    node_color=self.list_colors, edge_color='gray', font_weight='bold')
         else:
-            pos = nx.circular_layout(self.graph)  # Или другой алгоритм/ручное задание координат
-            nx.draw(self.graph, pos, with_labels=True, node_color='lightblue', edge_color='gray', font_weight='bold')
+            nx.draw(self.graph, pos, ax=ax, with_labels=True,
+                    node_color='lightblue', edge_color='gray', font_weight='bold')
+        if ax is None:
             plt.show()
 
     def get_edges(self):
@@ -308,24 +310,24 @@ class Graph:
 
         with open('test_all_methods.txt', 'a') as file:
             dict_usual = {}
-            dict_usual["method"] = "greedy"
+            dict_usual["method"] = "Жадный"
             dict_usual["time"] = res_time
             dict_usual["nodes"] = self.nodes
             dict_usual["edges"] = self.edge_count
             dict_usual["result"] = chromatic_number
             file.write(str(dict_usual)+"\n")
 
-        return chromatic_number
+        return dict_usual
 
-    def genetic_algorithm_coloring(self, population_size=50, generations=100, mutation_rate=0.2, crossover_rate=0.5,
-                                   coloring_method='greedy'):
+    def genetic_algorithm_coloring(self, population_size=50, generations=100, mutation_rate=0.9, crossover_rate=0.9,
+                                   coloring_method='Случайный', povt_count=50):
         """
         Генетический алгоритм с отслеживанием минимального хроматического числа во всех поколениях.
         :param population_size: Размер популяции.
         :param generations: Количество поколений.
         :param mutation_rate: Вероятность мутации.
         :param crossover_rate: Вероятность кроссовера.
-        :param coloring_method: Метод раскраски ('greedy', 'independent_set', 'random_safe', 'dsatur').
+        :param coloring_method: Метод раскраски ('Жадный', 'Нез. множ.', 'Случайный', 'DSATUR').
         :return: Минимальное хроматическое число, лучшая раскраска и данные для визуализации.
         """
 
@@ -597,10 +599,10 @@ class Graph:
 
         # Выбор метода раскраски
         coloring_methods = {
-            'greedy': greedy_coloring,
-            'independent_set': independent_set_coloring,
-            'random_safe': random_safe_coloring,
-            'dsatur': dsatur_coloring
+            'Жадный': greedy_coloring,
+            'Нез. множ.': independent_set_coloring,
+            'Случайный': random_safe_coloring,
+            'DSATUR': dsatur_coloring
         }
         if coloring_method not in coloring_methods:
             raise ValueError(
@@ -624,81 +626,172 @@ class Graph:
         chromatic_number_history = []
         best_individuals = []
 
-        # Основной цикл
-        for generation in range(generations):
-            # Оценка приспособленности и поиск минимального хроматического числа
-            conflict_scores = []
-            fitness_scores = []
-            valid_colorings = []  # Корректные раскраски (без конфликтов)
+        col_count = 0
+        all_count = 0
 
-            for individual in population:
-                conflicts = 0
-                for u, v in self.graph.edges:
-                    if individual[u - 1] == individual[v - 1]:
-                        conflicts += 1
-                num_colors = len(set(individual))
-                conflict_scores.append(conflicts)
-                fitness_scores.append(-conflicts - 1.0 * num_colors)
+        min_povt_count = 0
 
-                # Если раскраска корректна, проверяем число цветов
-                if conflicts == 0 and num_colors < min_chromatic_number:
-                    min_chromatic_number = num_colors
-                    best_coloring = individual.copy()
+        if povt_count != 0:
+            # Основной цикл
+            while col_count < povt_count:
+                # Оценка приспособленности и поиск минимального хроматического числа
+                conflict_scores = []
+                fitness_scores = []
+                valid_colorings = []  # Корректные раскраски (без конфликтов)
 
-                if conflicts == 0:
-                    valid_colorings.append(num_colors)
+                for individual in population:
+                    conflicts = 0
+                    for u, v in self.graph.edges:
+                        if individual[u - 1] == individual[v - 1]:
+                            conflicts += 1
+                    num_colors = len(set(individual))
+                    conflict_scores.append(conflicts)
+                    fitness_scores.append(-conflicts - 1.0 * num_colors)
 
-            # print(f"Поколение {generation} {f'| Минимальная в поколении: {min(valid_colorings)}' if len(valid_colorings) > 0 else ''}")
-            if generation == 0:
-                start_chromatic_number = min(valid_colorings)
+                    # Если раскраска корректна, проверяем число цветов
+                    if conflicts == 0 and num_colors < min_chromatic_number:
+                        min_chromatic_number = num_colors
+                        best_coloring = individual.copy()
 
-            # for i in range(len(population)):
-            #     print(f"{i}. Конфликтов: {conflict_scores[i]} Особь: {population[i]} Кол-во цветов: {len(set(population[i]))}")
-            #
-            # print()
+                    if conflicts == 0:
+                        valid_colorings.append(num_colors)
 
-            # Сохранение статистики
-            best_fitness = max(fitness_scores)
-            avg_fitness = sum(fitness_scores) / len(fitness_scores)
-            worst_fitness = min(fitness_scores)
-            best_individual = population[fitness_scores.index(best_fitness)]
-            chromatic_number = len(set(best_individual))
+                # print(f"Поколение {generation} {f'| Минимальная в поколении: {min(valid_colorings)}' if len(valid_colorings) > 0 else ''}")
+                if all_count == 0:
+                    start_chromatic_number = min(valid_colorings)
+                    min_povt_count = start_chromatic_number
 
-            best_fitness_history.append(best_fitness)
-            avg_fitness_history.append(avg_fitness)
-            worst_fitness_history.append(worst_fitness)
-            chromatic_number_history.append(chromatic_number)
-            best_individuals.append(best_individual.copy())
+                all_count += 1
 
-            # Сохраняем минимальное хроматическое число в этом поколении
-            min_chromatic_history.append(min_chromatic_number if valid_colorings else chromatic_number)
+                if min_povt_count != min_chromatic_number:
+                    min_povt_count = min_chromatic_number
+                else:
+                    col_count += 1
 
-            # Элитизм: сохраняем 10% лучших особей
-            elite_count = max(1, population_size // 10)
-            elite_indices = np.argsort(fitness_scores)[-elite_count:]
-            new_population = [population[idx].copy() for idx in elite_indices]
-            # print(f"Элитизм: {[population[idx].copy() for idx in elite_indices]}")
-            # print()
-            # print(f"Селекция:")
-            # Селекция для оставшихся особей
-            for b in range(population_size - elite_count):
-                candidates = random.sample(range(population_size), 2)
-                winner = candidates[0] if fitness_scores[candidates[0]] > fitness_scores[candidates[1]] else candidates[
-                    1]
-                # print(f"{b}. особь №{candidates[0]}({fitness_scores[candidates[0]]}) > особь №{candidates[1]}({fitness_scores[candidates[1]]})") if fitness_scores[candidates[0]] > fitness_scores[candidates[1]] else print(f"{b}. особь №{candidates[0]}({fitness_scores[candidates[0]]}) < особь №{candidates[1]}({fitness_scores[candidates[1]]})")
-                new_population.append(population[winner].copy())
-            # print()
+                # for i in range(len(population)):
+                #     print(f"{i}. Конфликтов: {conflict_scores[i]} Особь: {population[i]} Кол-во цветов: {len(set(population[i]))}")
+                #
+                # print()
 
-            # Кроссовер
-            new_population = perform_crossover(new_population, crossover_rate, self.graph)
+                # Сохранение статистики
+                best_fitness = max(fitness_scores)
+                avg_fitness = sum(fitness_scores) / len(fitness_scores)
+                worst_fitness = min(fitness_scores)
+                best_individual = population[fitness_scores.index(best_fitness)]
+                chromatic_number = len(set(best_individual))
 
-            # print("Мутация:")
-            # Мутация
-            for i in range(population_size):
-                new_population[i] = mutate(new_population[i], self.graph, mutation_rate, i)
-            # print()
+                best_fitness_history.append(best_fitness)
+                avg_fitness_history.append(avg_fitness)
+                worst_fitness_history.append(worst_fitness)
+                chromatic_number_history.append(chromatic_number)
+                best_individuals.append(best_individual.copy())
 
-            population = new_population
+                # Сохраняем минимальное хроматическое число в этом поколении
+                min_chromatic_history.append(min_chromatic_number if valid_colorings else chromatic_number)
+
+                # Элитизм: сохраняем 10% лучших особей
+                elite_count = max(1, population_size // 10)
+                elite_indices = np.argsort(fitness_scores)[-elite_count:]
+                new_population = [population[idx].copy() for idx in elite_indices]
+                # print(f"Элитизм: {[population[idx].copy() for idx in elite_indices]}")
+                # print()
+                # print(f"Селекция:")
+                # Селекция для оставшихся особей
+                for b in range(population_size - elite_count):
+                    candidates = random.sample(range(population_size), 2)
+                    winner = candidates[0] if fitness_scores[candidates[0]] > fitness_scores[candidates[1]] else \
+                    candidates[
+                        1]
+                    # print(f"{b}. особь №{candidates[0]}({fitness_scores[candidates[0]]}) > особь №{candidates[1]}({fitness_scores[candidates[1]]})") if fitness_scores[candidates[0]] > fitness_scores[candidates[1]] else print(f"{b}. особь №{candidates[0]}({fitness_scores[candidates[0]]}) < особь №{candidates[1]}({fitness_scores[candidates[1]]})")
+                    new_population.append(population[winner].copy())
+                # print()
+
+                # Кроссовер
+                new_population = perform_crossover(new_population, crossover_rate, self.graph)
+
+                # print("Мутация:")
+                # Мутация
+                for i in range(population_size):
+                    new_population[i] = mutate(new_population[i], self.graph, mutation_rate, i)
+                # print()
+
+                population = new_population
+        else:
+            # Основной цикл
+            for generation in range(generations):
+                # Оценка приспособленности и поиск минимального хроматического числа
+                conflict_scores = []
+                fitness_scores = []
+                valid_colorings = []  # Корректные раскраски (без конфликтов)
+
+                for individual in population:
+                    conflicts = 0
+                    for u, v in self.graph.edges:
+                        if individual[u - 1] == individual[v - 1]:
+                            conflicts += 1
+                    num_colors = len(set(individual))
+                    conflict_scores.append(conflicts)
+                    fitness_scores.append(-conflicts - 1.0 * num_colors)
+
+                    # Если раскраска корректна, проверяем число цветов
+                    if conflicts == 0 and num_colors < min_chromatic_number:
+                        min_chromatic_number = num_colors
+                        best_coloring = individual.copy()
+
+                    if conflicts == 0:
+                        valid_colorings.append(num_colors)
+
+                # print(f"Поколение {generation} {f'| Минимальная в поколении: {min(valid_colorings)}' if len(valid_colorings) > 0 else ''}")
+                if generation == 0:
+                    start_chromatic_number = min(valid_colorings)
+
+                # for i in range(len(population)):
+                #     print(f"{i}. Конфликтов: {conflict_scores[i]} Особь: {population[i]} Кол-во цветов: {len(set(population[i]))}")
+                #
+                # print()
+
+                # Сохранение статистики
+                best_fitness = max(fitness_scores)
+                avg_fitness = sum(fitness_scores) / len(fitness_scores)
+                worst_fitness = min(fitness_scores)
+                best_individual = population[fitness_scores.index(best_fitness)]
+                chromatic_number = len(set(best_individual))
+
+                best_fitness_history.append(best_fitness)
+                avg_fitness_history.append(avg_fitness)
+                worst_fitness_history.append(worst_fitness)
+                chromatic_number_history.append(chromatic_number)
+                best_individuals.append(best_individual.copy())
+
+                # Сохраняем минимальное хроматическое число в этом поколении
+                min_chromatic_history.append(min_chromatic_number if valid_colorings else chromatic_number)
+
+                # Элитизм: сохраняем 10% лучших особей
+                elite_count = max(1, population_size // 10)
+                elite_indices = np.argsort(fitness_scores)[-elite_count:]
+                new_population = [population[idx].copy() for idx in elite_indices]
+                # print(f"Элитизм: {[population[idx].copy() for idx in elite_indices]}")
+                # print()
+                # print(f"Селекция:")
+                # Селекция для оставшихся особей
+                for b in range(population_size - elite_count):
+                    candidates = random.sample(range(population_size), 2)
+                    winner = candidates[0] if fitness_scores[candidates[0]] > fitness_scores[candidates[1]] else candidates[
+                        1]
+                    # print(f"{b}. особь №{candidates[0]}({fitness_scores[candidates[0]]}) > особь №{candidates[1]}({fitness_scores[candidates[1]]})") if fitness_scores[candidates[0]] > fitness_scores[candidates[1]] else print(f"{b}. особь №{candidates[0]}({fitness_scores[candidates[0]]}) < особь №{candidates[1]}({fitness_scores[candidates[1]]})")
+                    new_population.append(population[winner].copy())
+                # print()
+
+                # Кроссовер
+                new_population = perform_crossover(new_population, crossover_rate, self.graph)
+
+                # print("Мутация:")
+                # Мутация
+                for i in range(population_size):
+                    new_population[i] = mutate(new_population[i], self.graph, mutation_rate, i)
+                # print()
+
+                population = new_population
 
         # Финальная проверка лучшей раскраски
         best_individual = max(population, key=fitness)
@@ -711,7 +804,7 @@ class Graph:
 
         with open('test_all_methods.txt', 'a') as file:
             dict_usual = {}
-            dict_usual["method"] = f"genetic_algorithm_{coloring_method}"
+            dict_usual["method"] = f"Генетический"
             dict_usual["time"] = res_time
             dict_usual["nodes"] = self.nodes
             dict_usual["edges"] = self.edge_count
@@ -719,16 +812,7 @@ class Graph:
             file.write(str(dict_usual) + "\n")
 
         # Возвращаем минимальное хроматическое число и данные для визуализации
-        return min_chromatic_number, {
-            'best_fitness': best_fitness_history,
-            'avg_fitness': avg_fitness_history,
-            'worst_fitness': worst_fitness_history,
-            'chromatic_number': chromatic_number_history,
-            'min_chromatic_number': min_chromatic_history,
-            'best_individuals': best_individuals,
-            'best_coloring': best_coloring or best_individual,
-            'start_chromatic_number': start_chromatic_number
-        }
+        return dict_usual
 
     def genetic_coloring(self, population_size=5, generations=5, mutation_rate=0.1, elite_size=5):
         """
@@ -923,8 +1007,8 @@ class Graph:
         print("=== ГЕНЕТИЧЕСКИЙ АЛГОРИТМ ЗАВЕРШЕН ===\n")
         return num_colors
 
-    def improved_genetic_coloring(self, population_size=50, generations=100, initial_mutation_rate=0.2, elite_size=5,
-                                  local_search_prob=0.2, flag=True):
+    def improved_genetic_coloring(self, population_size=100, generations=500, initial_mutation_rate=0.4, elite_size=30,
+                                  local_search_prob=0.7, flag=True):
         """
         Улучшенный генетический алгоритм для нахождения хроматического числа графа.
 
@@ -1368,7 +1452,7 @@ class Graph:
         if flag == True:
             with open('test_all_methods.txt', 'a') as file:
                 dict_usual = {}
-                dict_usual["method"] = "improved_genetic"
+                dict_usual["method"] = "MAGU"
                 dict_usual["time"] = res_time
                 dict_usual["nodes"] = self.nodes
                 dict_usual["edges"] = self.edge_count
@@ -1378,7 +1462,7 @@ class Graph:
         else:
             with open('test_all_methods.txt', 'a') as file:
                 dict_usual = {}
-                dict_usual["method"] = "improved_genetic"
+                dict_usual["method"] = "MAGU"
                 dict_usual["time"] = res_time
                 dict_usual["nodes"] = self.nodes
                 dict_usual["edges"] = self.edge_count
@@ -1386,7 +1470,7 @@ class Graph:
                 dict_usual["current_best_colors"] = "False"
                 file.write(str(dict_usual)+"\n")
 
-        return best_chromatic_number
+        return dict_usual
 
 
 if __name__ == '__main__':
@@ -1403,7 +1487,7 @@ if __name__ == '__main__':
     # # g.draw_graph()
 
     # """ Генетический алгоритм """
-    # # g = Graph(20)
+    # g = Graph(16, 120)
     # print("Приближенное хроматическое число (генетический алгоритм):", g.genetic_algorithm_coloring())
     # g.draw_graph()
 
@@ -1427,12 +1511,17 @@ if __name__ == '__main__':
     #         g.improved_genetic_coloring(flag=False)
     #         print(i)
 
-    for i in range(100):
-        g = Graph(13)
-        g.greedy_coloring()
-        g.genetic_algorithm_coloring(coloring_method="greedy")
+    for i in range(50):
+        if i < 50:
+            g = Graph(16)
+        elif 50 <= i < 100:
+            g = Graph(16)
+        else:
+            g = Graph(17)
+        # g.greedy_coloring()
+        # g.genetic_algorithm_coloring(coloring_method="greedy")
         # g.genetic_algorithm_coloring(coloring_method="independent_set")
-        # g.genetic_algorithm_coloring(coloring_method="random_safe")
+        g.genetic_algorithm_coloring()
         # g.genetic_algorithm_coloring(coloring_method="dsatur")
-        g.improved_genetic_coloring()
+        # g.improved_genetic_coloring()
         print(i)
